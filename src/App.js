@@ -40,6 +40,8 @@ function App() {
     // whenever a new country is selected from the dropdown menu, we need the new country to stick to the dropdown menu box
     const countryCode = event.target.value;
     console.log("Yooooo >>>", countryCode);
+
+    // the below line, makes the selected country stick to the dropdown menu box
     setCountry(countryCode);
   };
 

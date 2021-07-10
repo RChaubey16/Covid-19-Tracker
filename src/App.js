@@ -10,6 +10,7 @@ import "./App.css";
 import InfoBox from "./InfoBox";
 import Map from "./Map";
 import Table from "./Table";
+import { SortData } from "./util";
 
 function App() {
   // STATE = How to write a variable in REACT <<<<< simple definition for state
@@ -47,9 +48,11 @@ function App() {
             value: country.countryInfo.iso2, // USA, UK
           }));
 
-          setTableData(data);
+          const sortedData = SortData(data);
+
+          setTableData(sortedData);
           // setCountries updates the country state with upto date data
-          setCountries(countries);
+          setCountries(sortedData);
         });
     };
 

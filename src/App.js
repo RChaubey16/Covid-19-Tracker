@@ -1,6 +1,7 @@
 import { FormControl, MenuItem, Select } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import InfoBox from "./InfoBox";
 
 function App() {
   // STATE = How to write a variable in REACT <<<<< simple definition for state
@@ -39,9 +40,8 @@ function App() {
   const onCountryChange = async (event) => {
     // whenever a new country is selected from the dropdown menu, we need the new country to stick to the dropdown menu box
     const countryCode = event.target.value;
-    console.log("Yooooo >>>", countryCode);
 
-    // the below line, makes the selected country stick to the dropdown menu box
+    // the below line, makes the selected country sticks to the dropdown menu box
     setCountry(countryCode);
   };
 
@@ -68,11 +68,12 @@ function App() {
         </FormControl>
       </div>
 
-      {/* Header */}
-      {/* Title + Select input dropdown field */}
-      {/* InfoBoxes */}
-      {/* InfoBoxes */}
-      {/* InfoBoxes */}
+      <div className="app__stats">
+        <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
+        <InfoBox title="Recovered" cases={1234} total={3000} />
+        <InfoBox title="Death" cases={12345} total={4000} />
+      </div>
+
       {/* Table */}
       {/* Graph */}
       {/* Map */}

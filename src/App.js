@@ -47,7 +47,6 @@ function App() {
             value: country.countryInfo.iso2, // USA, UK
           }));
 
-          // storing the countires data here as well
           setTableData(data);
           // setCountries updates the country state with upto date data
           setCountries(countries);

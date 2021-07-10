@@ -19,7 +19,7 @@ function App() {
   // https://disease.sh/v3/covid-19/countries
 
   const [countries, setCountries] = useState([]);
-  const [country, setCountry] = useState(["worldwide"]);
+  const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
 
@@ -52,7 +52,7 @@ function App() {
 
           setTableData(sortedData);
           // setCountries updates the country state with upto date data
-          setCountries(sortedData);
+          setCountries(countries);
         });
     };
 
